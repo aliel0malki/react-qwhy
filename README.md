@@ -5,9 +5,9 @@
   
   <p> React QWhy A React library for fetch data fast and easy! </p>
   <br/>
-  ```
-  version 0.2.0
-  ```
+
+  ## version 0.2.4
+
   <br/>
   <br/>
   If you like react-qwhy, please give us a star and if you want contributor we will be grateful to you! 😎

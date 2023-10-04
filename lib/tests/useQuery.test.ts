@@ -9,9 +9,9 @@ describe("react-qwhy hooks =>", () => {
   test("Status of Environment", () => {
     expect(typeof window).not.toBe("undefined");
   });
-  test("test useQuery hook", () => {
-    const result = render(App);
-    const someElement = result.container.querySelector("#cont");
-    expect(someElement).toBeDefined();
+  test("useQuery should fetch data and pass it to `return`", () => {
+    const dom = render(App);
+    const dataElementContainer = don.container.querySelector("#cont");
+    expect(dataElementContainer).toBeDefined();
   });
 });

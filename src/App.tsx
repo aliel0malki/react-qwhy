@@ -11,10 +11,10 @@ type TodoProps = {
 
 function App() {
   /*
-   * Fetch todo/1 from [ JsonPlaceholder ]
+   * Fetch todos from [ JsonPlaceholder ]
    * Pass a TodoProps as generic to useQuery()
    */
-  const { error, status, isLoading, data } = useQuery<TodoProps>(
+  const { error, status, isLoading, data } = useQuery<TodoProps[]>(
     "https://jsonplaceholder.typicode.com/todos/1"
   );
 
@@ -26,14 +26,15 @@ function App() {
     <>
       <h1>react-qwhy</h1>
       <hr />
-      {data && (
-        <div id="cont">
-          <h1>{data?.title}</h1>
-          <h5>completed? {data?.completed ? "Yes" : "No"}</h5>
-          <h5>{data?.id}</h5>
-          <span>{data?.userId}</span>
-        </div>
-      )}
+      <ul data-testid="data-cont">
+      {data?.map((todo) => (
+        <li key={todo.id}>
+          <h1>{todo.title}</h1>
+          <h5>completed? {todo.completed ? "Yes" : "No"}</h5>
+          <h5>{todo.id}</h5>
+          <span>{todo.userId}</span>
+        </li>
+      ))}</ul>
     </>
   );
 }

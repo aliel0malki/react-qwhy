@@ -1,4 +1,3 @@
-// vite.config.js
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 /// <reference types="vitest" />
@@ -11,10 +10,11 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./lib/tests/setup.ts"],
     coverage: {
-      reporter: ["text", "json", "html"],
+      reporter: ["json", "html"],
       reportsDirectory: "./lib/tests/coverage",
     },
-  },plugins: [react(), dts({ include: ["lib/**/*.{ts,tsx}"] })],
+  },
+  plugins: [react(), dts({ include: ["lib/**/*.{ts,tsx}"] })],
   build: {
     copyPublicDir: false,
     lib: {
@@ -25,12 +25,10 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
+
       external: ["react"],
       output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
+
         globals: {
           react: "React",
         },

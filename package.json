@@ -1,9 +1,13 @@
 {
   "name": "react-qwhy",
   "private": false,
-  "version": "0.2.5",
+  "version": "0.2.8",
   "type": "module",
-  "files": ["dist/", "README.md", "LICENSE.txt"],
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE.txt"
+  ],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

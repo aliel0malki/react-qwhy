@@ -6,19 +6,21 @@
   <p> React QWhy A React library for fetch data fast and easy! </p>
   <br/>
 
-  ## version 0.2.4
+## version 0.2.4
 
   <br/>
   <br/>
   If you like react-qwhy, please give us a star and if you want contributor we will be grateful to you! 😎
 <!-- Badges -->
 <p>
+  ![test passed](https://github.com/aliel0malki/react-qwhy/actions/workflows/build-and-test.yml/badge.svg)
   <a href="https://github.com/aliel0malki/react-qwhy/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/aliel0malki/react-qwhy" alt="contributors" />
   </a>
   <a href="">
     <img src="https://img.shields.io/github/last-commit/aliel0malki/react-qwhy" alt="last update" />
   </a>
+  ![production](https://github.com/aliel0malki/react-qwhy/actions/workflows/publish.npm.yml/badge.svg)
   <a href="https://github.com/aliel0malki/react-qwhy/network/members">
     <img src="https://img.shields.io/github/forks/aliel0malki/react-qwhy" alt="forks" />
   </a>

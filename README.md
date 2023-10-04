@@ -34,7 +34,9 @@
 
 </p>
 
-## v 0.2.4 Beta
+🚧  IMPORTANT  🚧
+
+> react-qwhy is not ready to production, if you make a mistake, you are responsible
 
   <br/>
 
@@ -57,21 +59,21 @@
 # ⚛️ Table of Contents
 
 - [About the Project](#about-the-project)
-- [Tech Stack](#tech-stack)
-- [Features](#dart-features)
-- [Getting Started](#toolbox-getting-started)
-  - [Prerequisites](#bangbang-prerequisites)
-  - [Installation](#gear-installation)
-  - [Running Tests](#test_tube-running-tests)
-- [Usage](#eyes-usage)
+- [Tech Stack](#works-on)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running Tests](#running-tests)
+- [Usage](#usage)
   - [Returned Values](#options)
   - [Example](#example)
-- [Roadmap](#compass-roadmap)
-- [Contributing](#wave-contributing)
-- [FAQ](#grey_question-faq)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [FAQ](#faq)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
 <!-- About the Project -->
 
@@ -82,7 +84,7 @@ This is the problem. That's where React QWhy comes in !
 
 <!-- TechStack -->
 
-### 🛰 Works On
+### Works On
 
   <ul>
     <li><a href="https://react.dev/">REACT</a></li>
@@ -91,10 +93,9 @@ This is the problem. That's where React QWhy comes in !
     <li>Any Framework built-on React</li>
   </ul>
 
-
 <!-- Features -->
 
-### 🚀 Features
+### Features
 
 - Esay to Use 🧠
 - Incredibly Fast 🚀
@@ -102,43 +103,43 @@ This is the problem. That's where React QWhy comes in !
 
 <!-- Getting Started -->
 
-## 🧰  Getting Started
+## Getting Started
 
 <!-- Prerequisites -->
 
-### 🪡  Prerequisites
+### Prerequisites
 
-This project Built in React as a library
+This project Built-in React
 
 ```bash
-  npm i react react-dom
+  npm i react
 ```
 
 <!-- Installation -->
 
-### ⚓  Installation
+### Installation
 
-Install react-qwhy with NPM
+Install react-qwhy with npm
 
 ```bash
   npm install react-qwhy
 ```
 
-Install react-qwhy with Yarn
+Install react-qwhy with yarn
 
 ```bash
-  yarn install react-qwhy
+  yarn add react-qwhy
 ```
 
-Install react-qwhy with PNPM
+Install react-qwhy with pnpm
 
 ```bash
-  pnpm install react-qwhy
+  pnpm add react-qwhy
 ```
 
 <!-- Running Tests -->
 
-### 🧪  Running Tests
+### Running Tests
 
 To run tests, run the following command
 
@@ -148,9 +149,9 @@ To run tests, run the following command
 
 <!-- Run Locally -->
 
-### 🚧  Run Locally
+### Fork
 
-Clone react-qwhy src
+Clone react-qwhy repo
 
 ```bash
   git clone https://github.com/aliel0malki/react-qwhy.git
@@ -176,7 +177,7 @@ Start the server
 
 <!-- Usage -->
 
-## Usage 🐐
+## Usage
 
 Here's how to use it
 
@@ -192,16 +193,16 @@ function yourComponent() {
 }
 ```
 
-## ❔️ Return
+## useQuery Return
 
-| Variable | Return |
-| --- | --- |
-| `status` | `number` |
-| `isLoading` | `boolean` |
-| `error` | `any` |
-| `data` | `<ResultProps>` |
+| Variable    | Return                               |
+| ----------- | ------------------------------------ |
+| `status`    | `number`                             |
+| `isLoading` | `boolean`                            |
+| `error`     | `any`                                |
+| `data`      | `<ResultProps>` or `<ResultProps[]>` |
 
-## Here's Example 🥚
+## Example
 
 ```typescript
 import { useQuery } from "react-qwhy";
@@ -248,7 +249,7 @@ export default App;
 
 <!-- Roadmap -->
 
-## Roadmap 🛣
+## Roadmap
 
 - [ ] useMutation => add, delete, put, the data 🔥
 - [ ] State Management for < useQuery & useMutation > 🐐
@@ -256,7 +257,7 @@ export default App;
 
 <!-- Contributing -->
 
-## Contributors 👑
+## Contributing
 
 <a href="https://github.com/aliel0malki/react-qwhy/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=aliel0malki/react-qwhy" />
@@ -268,7 +269,7 @@ See `contributing.md` for ways to get started.
 
 <!-- FAQ -->
 
-## FAQ 🤔
+## FAQ
 
 - it's work on react-native?
 
@@ -279,13 +280,13 @@ See `contributing.md` for ways to get started.
 
 <!-- License -->
 
-## ⚠️ License
+## License
 
 Distributed under the no License. See LICENSE.txt for more information.
 
 <!-- Contact -->
 
-## 🖐 Contact
+## Contact
 
 Ali Elmalki - [@npm](https://www.npmjs.com/~alielmalki) - alielmalki.developer@gmail.com
 
@@ -293,7 +294,7 @@ Project Link: [https://github.com/aliel0malki/react-qwhy](https://github.com/ali
 
 <!-- Acknowledgments -->
 
-## 💎 Acknowledgements
+## Acknowledgements
 
 useful resources and libraries we have used in react-qwhy.
 

@@ -1,13 +1,9 @@
 {
-  "name": "react-qwhy",
+  "name": "@react-qwhy/react-qwhy",
   "private": false,
-  "version": "0.2.4",
+  "version": "0.2.5",
   "type": "module",
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE.txt"
-  ],
+  "files": ["dist", "README.md", "LICENSE.txt"],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -26,7 +22,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "description": "a react library to fetch data like react-query",
+  "description": "a react library for fetch data fast and easy",
   "author": "alielmalki",
   "license": "GPL-3",
   "homepage": "https://github.com/aliel0malki/react-qwhy",
@@ -52,8 +48,7 @@
     "react-dom": "^18.2.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.3",

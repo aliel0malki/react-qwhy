@@ -1,3 +1,0 @@
-(function(t,e){typeof exports=="object"&&typeof module<"u"?e(exports,require("react")):typeof define=="function"&&define.amd?define(["exports","react"],e):(t=typeof globalThis<"u"?globalThis:t||self,e(t["react-qwhy"]={},t.React))})(this,function(t,e){"use strict";const i=r=>{const[c,o]=e.useState(),[f,a]=e.useState(!1),[d,u]=e.useState(void 0),[y,h]=e.useState(null);return e.useEffect(()=>{(async()=>{a(!0);try{const s=await fetch(r),n=await s.json();Array.isArray(n)?u(n):u([n]),o(s.status)}catch(s){console.error(`An error occurred while fetching data
-####### Error #######
-`,s),o(404),h(s)}a(!1)})()},[r]),{status:c,isLoading:f,data:d,error:y}};t.useQuery=i,Object.defineProperty(t,Symbol.toStringTag,{value:"Module"})});

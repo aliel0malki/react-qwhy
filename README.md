@@ -2,34 +2,36 @@
 
   <img src="./assets/20231003_165559_0000.png" alt="logo" width="200" height="auto" />
   <h1>React QWhy</h1>
-  
-  <p> React QWhy A React library for fetch data fast and easy! </p>
+    <p> React QWhy A React library for fetch data fast and easy! </p>
   <br/>
-  If you like react-qwhy, please give us a star and if you want contributor we will be grateful to you! 😎
+  
+   If you like react-qwhy, please give us a star and if you want to be contributor we will be grateful to you!
+
+<br/>
+
 <!-- Badges -->
-[![Tests](https://github.com/aliel0malki/react-qwhy/actions/workflows/build-and-test.yml/badge.svg?branch=dev)](https://github.com/aliel0malki/react-qwhy/actions/workflows/build-and-test.yml)
 <p>
-  <a href="https://github.com/aliel0malki/react-qwhy/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/aliel0malki/react-qwhy" alt="contributors" />
-  </a>
-  <a href="">
-    <img src="https://img.shields.io/github/last-commit/aliel0malki/react-qwhy" alt="last update" />
-  </a>
-  </p>
-  [![Publish to NPM](https://github.com/aliel0malki/react-qwhy/actions/workflows/publish.npm.yml/badge.svg?branch=main)](https://github.com/aliel0malki/react-qwhy/actions/workflows/publish.npm.yml)
-<p>
-  <a href="https://github.com/aliel0malki/react-qwhy/network/members">
-    <img src="https://img.shields.io/github/forks/aliel0malki/react-qwhy" alt="forks" />
-  </a>
-  <a href="https://github.com/aliel0malki/react-qwhy/stargazers">
-    <img src="https://img.shields.io/github/stars/aliel0malki/react-qwhy" alt="stars" />
-  </a>
-  <a href="https://github.com/aliel0malki/react-qwhy/issues/">
-    <img src="https://img.shields.io/github/issues/aliel0malki/react-qwhy" alt="open issues" />
-  </a>
-  <a href="https://github.com/aliel0malki/react-qwhy/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/aliel0malki/react-qwhy.svg" alt="license" />
-  </a>
+  
+  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/aliel0malki/react-qwhy/build-and-test.yml?label=tests">
+
+  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/aliel0malki/react-qwhy/publish.npm.yml?style=flat-square&label=npm publish">
+
+  <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/aliel0malki/react-qwhy/main?style=flat-square">
+
+<img alt="GitHub Release Date - Published_At" src="https://img.shields.io/github/release-date/aliel0malki/react-qwhy?style=flat-square">
+
+<img alt="npm" src="https://img.shields.io/npm/dm/react-qwhy?style=flat-square">
+
+<img alt="NPM" src="https://img.shields.io/npm/l/react-qwhy?style=flat-square">
+
+<img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/react-qwhy?style=flat-square">
+
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/aliel0malki/react-qwhy?style=flat-square">
+
+<img alt="npm" src="https://img.shields.io/npm/v/react-qwhy?style=flat-square">
+
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/aliel0malki/react-qwhy?style=flat-square">
+
 </p>
 
 ## v 0.2.4 Beta
@@ -80,32 +82,31 @@ This is the problem. That's where React QWhy comes in !
 
 <!-- TechStack -->
 
-### 🛰 Tech Stack
+### 🛰 Works On
 
-<details>
-  <summary>JUST REACT</summary>
   <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://nextjs.org/">Next ts || React ts</a></li>
-    <li><a href="https://tailwindcss.com/">React js || Next js</a></li>
+    <li><a href="https://react.dev/">REACT</a></li>
+    <li><a href="https://nextjs.org/">NEXT JS</a></li>
+    <li><a href="https://gatsby.dev/">GATSBY</a></li>
+    <li>Any Framework built-on React</li>
   </ul>
-</details>
+
 
 <!-- Features -->
 
 ### 🚀 Features
 
-- Esay to Use ♻️
+- Esay to Use 🧠
 - Incredibly Fast 🚀
 - Scalable & Timeless in Development 🕛
 
 <!-- Getting Started -->
 
-## 🧰 Getting Started
+## 🧰  Getting Started
 
 <!-- Prerequisites -->
 
-### 🪡 Prerequisites
+### 🪡  Prerequisites
 
 This project Built in React as a library
 
@@ -115,7 +116,7 @@ This project Built in React as a library
 
 <!-- Installation -->
 
-### ⚓ Installation
+### ⚓  Installation
 
 Install react-qwhy with NPM
 
@@ -137,7 +138,7 @@ Install react-qwhy with PNPM
 
 <!-- Running Tests -->
 
-### 🧪 Running Tests
+### 🧪  Running Tests
 
 To run tests, run the following command
 
@@ -147,7 +148,7 @@ To run tests, run the following command
 
 <!-- Run Locally -->
 
-### 🚧 Run Locally
+### 🚧  Run Locally
 
 Clone react-qwhy src
 
@@ -191,20 +192,14 @@ function yourComponent() {
 }
 ```
 
-## ❔️ Options
+## ❔️ Return
 
-Three values are returned (for now)
-`status`,`isLoading`, `error` and `data`
-
-<hr/>
-`status` return `number`
-<br/>
-`isLoading` return `boolean`
-<br/>
-`error` return `any`
-<br/>
-`data` return `generic`
-<br/>
+| Variable | Return |
+| --- | --- |
+| `status` | `number` |
+| `isLoading` | `boolean` |
+| `error` | `any` |
+| `data` | `<ResultProps>` |
 
 ## Here's Example 🥚
 
@@ -303,7 +298,6 @@ Project Link: [https://github.com/aliel0malki/react-qwhy](https://github.com/ali
 useful resources and libraries we have used in react-qwhy.
 
 - [React](https://react.dev/)
-- [Vite](hhttps://vitejs.dev/)
-- [Vitest](https://vitest.dev/)
-- [RollUp](https://rollup.com/)
-- [Shields.io](https://shields.io/)
+- [Vite](https://vitejs.dev/)
+- [Vitest](https://vitest.dev)
+- [RollUp](https://rollup.dev)

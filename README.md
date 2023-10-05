@@ -2,10 +2,10 @@
 
   <img src="./assets/20231003_165559_0000.png" alt="logo" width="200" height="auto" />
   <h1>React QWhy</h1>
-    <p> React QWhy A React library for fetch data fast and easy! </p>
+    <p>A React library for fetch data fast and easy!</p>
   <br/>
   
-   If you like react-qwhy, please give us a star and if you want to be contributor we will be grateful to you!
+   please give us a star and if you want to contributing we will be grateful to you
 
 <br/>
 
@@ -34,9 +34,9 @@
 
 </p>
 
-🚧  IMPORTANT  🚧
+🚧 IMPORTANT 🚧
 
-> react-qwhy is not ready to production, if you make a mistake, you are responsible
+> ### react-qwhy is not ready to production
 
   <br/>
 
@@ -64,9 +64,8 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Running Tests](#running-tests)
 - [Usage](#usage)
-  - [Returned Values](#options)
+  - [Return Type](#usequery-return)
   - [Example](#example)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
@@ -79,8 +78,7 @@
 
 ## About the Project
 
-I've used React Query a lot... really, it's a great library, but how much time does it take to finish the setup?
-This is the problem. That's where React QWhy comes in !
+I was and still am using react-query, but it is difficult to install and setup the environment, so I thought of building my own library, developing it, and using it in my projects, so react-qwhy appeared.
 
 <!-- TechStack -->
 
@@ -97,9 +95,11 @@ This is the problem. That's where React QWhy comes in !
 
 ### Features
 
-- Esay to Use 🧠
-- Incredibly Fast 🚀
-- Scalable & Timeless in Development 🕛
+1. Esay to Use 🧠
+2. Fully Type Safety 🌀
+3. No Providers and all that sh^t 👌
+4. Incredibly Fast 🚀
+5. Scalable & Timeless in Development 🕛
 
 <!-- Getting Started -->
 
@@ -109,11 +109,7 @@ This is the problem. That's where React QWhy comes in !
 
 ### Prerequisites
 
-This project Built-in React
-
-```bash
-  npm i react
-```
+Just React Library
 
 <!-- Installation -->
 
@@ -137,49 +133,11 @@ Install react-qwhy with pnpm
   pnpm add react-qwhy
 ```
 
-<!-- Running Tests -->
-
-### Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
-
-<!-- Run Locally -->
-
-### Fork
-
-Clone react-qwhy repo
-
-```bash
-  git clone https://github.com/aliel0malki/react-qwhy.git
-```
-
-Go to the react-qwhy directory
-
-```bash
-  cd react-qwhy
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run dev
-```
-
 <!-- Usage -->
 
 ## Usage
 
-Here's how to use it
+Here's how to use **useQuery**
 
 ```typescript
 import { useQuery } from "react-qwhy";
@@ -195,12 +153,12 @@ function yourComponent() {
 
 ## useQuery Return
 
-| Variable    | Return                               |
-| ----------- | ------------------------------------ |
-| `status`    | `number`                             |
-| `isLoading` | `boolean`                            |
-| `error`     | `any`                                |
-| `data`      | `<ResultProps>` or `<ResultProps[]>` |
+| Variable    | Return Type                                         |
+| ----------- | --------------------------------------------------- |
+| `status`    | `number`                                            |
+| `isLoading` | `boolean`                                           |
+| `error`     | `any`                                               |
+| `data`      | `<ResultProps>` or `<ResultProps[]>` or `undefined` |
 
 ## Example
 
@@ -224,16 +182,16 @@ function App() {
     "https://jsonplaceholder.typicode.com/todos/1"
   );
 
-  // When fetch progress, display h1 written in it "loading..." //
+  // When fetching, display h1 written in it "loading..." //
   if (isLoading) return <h1>loading...</h1>;
 
-  // return the component //
+  // render component //
   return (
     <>
       <h1>react-qwhy</h1>
       <hr />
       {data && (
-        <div id="cont">
+        <div>
           <h1>{data?.title}</h1>
           <h5>completed? {data?.completed ? "Yes" : "No"}</h5>
           <h5>{data?.id}</h5>
@@ -251,9 +209,9 @@ export default App;
 
 ## Roadmap
 
-- [ ] useMutation => add, delete, put, the data 🔥
-- [ ] State Management for < useQuery & useMutation > 🐐
-- [ ] OPP & Support
+- [ No ] useMutation 🔥
+- [ No ] State Management 🐐
+- [ Yes ] Support
 
 <!-- Contributing -->
 

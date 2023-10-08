@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 
-// interface of returned vars
-interface UseQueryReturnProps<DataProps> {
+export interface IUseQueryReturnProps<DataProps> {
   status: number | undefined;
   isLoading: boolean;
   error: any;
-  data: DataProps[] | DataProps | undefined;
+  data: DataProps[] | DataProps | undefined | void;
 }
 
 // expect to pass apiurl & data type to ti
 const useQuery = <ReturnResult>(
-  apiUrl: string
-): UseQueryReturnProps<ReturnResult> => {
+  qName: string,
+  qFn: () => Promise<any[]>
+): IUseQueryReturnProps<ReturnResult> => {
+  console.log(qName);
   // Define returned values
   // status => return status code of fetched api
   const [status, setStatus] = useState<number>();
@@ -22,9 +23,9 @@ const useQuery = <ReturnResult>(
   // tryFetch => I fetch not success fetch it again ( 3 try only )
   const [tryFetch, setTryFetch] = useState<number>(3);
   // data => return data fetched if fetch success
-  const [data, setData] = useState<ReturnResult[] | ReturnResult | undefined>(
-    undefined
-  );
+  const [data, setData] = useState<
+    ReturnResult[] | ReturnResult | undefined | void
+  >(undefined);
   // use useEffect to run it on browser
   useEffect(() => {
     // Define async fetchData
@@ -32,20 +33,15 @@ const useQuery = <ReturnResult>(
       setIsLoading(true);
 
       try {
-        const response = await fetch(apiUrl);
-        const responseData = await response.json();
-
-        if (Array.isArray(responseData)) {
-          setData(responseData);
-        } else {
-          setData([responseData]);
-        }
-        setStatus(response.status);
+        const response = await qFn();
+        setData(response);
+        setStatus(200);
       } catch (error) {
         // try fetch again if tryFetch > 0
         if (tryFetch > 0) {
           // decrement tryFetch - 1
           setTryFetch(tryFetch - 1);
+          return;
         } else {
           // When tryFetch is == 0
           setStatus(404);

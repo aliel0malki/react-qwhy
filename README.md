@@ -12,7 +12,7 @@
 <!-- Badges -->
 <p>
   
-  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/aliel0malki/react-qwhy/build-and-test.yml?label=tests">
+  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/aliel0malki/react-qwhy/build-and-test.yml?style=flat-square&label=tests">
 
   <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/aliel0malki/react-qwhy/publish.npm.yml?style=flat-square&label=npm publish">
 
@@ -144,8 +144,8 @@ import { useQuery } from "react-qwhy";
 
 function yourComponent() {
   ...
-  // return important values
-  const {} = useQuery()
+  // return params
+  const {} = useQuery(qName: string, qFn: Function)
   ...
   return ...;
 }
@@ -153,17 +153,17 @@ function yourComponent() {
 
 ## useQuery Return
 
-| Variable    | Return Type                                         |
-| ----------- | --------------------------------------------------- |
-| `status`    | `number`                                            |
-| `isLoading` | `boolean`                                           |
-| `error`     | `any`                                               |
-| `data`      | `<ResultProps>` or `<ResultProps[]>` or `undefined` |
+| Variable    | Return Type                      |
+| ----------- | -------------------------------- |
+| `status`    | `number`                         |
+| `isLoading` | `boolean`                        |
+| `error`     | `any`                            |
+| `data`      | `<ResultProps[]>` or `undefined` |
 
 ## Example
 
 ```typescript
-import { useQuery } from "react-qwhy";
+import { useQuery } from "../dist/index";
 
 // todo interface //
 type TodoProps = {
@@ -173,31 +173,38 @@ type TodoProps = {
   completed: boolean;
 };
 
+// fetch function //
+const fetchTodos = async () => {
+  const req = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const res = await req.json();
+  return res;
+};
+
 function App() {
   /*
-   * Fetch todo/1 from [ JsonPlaceholder ]
-   * Pass a TodoProps as generic to useQuery()
+   * Fetch todos from [ JsonPlaceholder ]
+   * Pass TodoProps as [] to useQuery()
+   * Pass a name & query function to useQuery()
    */
-  const { error, status, isLoading, data } = useQuery<TodoProps>(
-    "https://jsonplaceholder.typicode.com/todos/1"
-  );
 
-  // When fetching, display h1 written in it "loading..." //
+  const { data, isLoading } = useQuery<TodoProps[]>("fetch_todos", fetchTodos);
+
+  // When fetch progress, display h1 written in it "loading..." //
   if (isLoading) return <h1>loading...</h1>;
 
-  // render component //
+  // return the component //
   return (
     <>
-      <h1>react-qwhy</h1>
-      <hr />
-      {data && (
-        <div>
-          <h1>{data?.title}</h1>
-          <h5>completed? {data?.completed ? "Yes" : "No"}</h5>
-          <h5>{data?.id}</h5>
-          <span>{data?.userId}</span>
-        </div>
-      )}
+      <ul>
+        {data?.map((todo) => (
+          <li key={todo.id}>
+            <h1>{todo.title}</h1>
+            <h5>completed? {todo.completed ? "Yes" : "No"}</h5>
+            <h5>{todo.id}</h5>
+            <span>{todo.userId}</span>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
@@ -209,9 +216,9 @@ export default App;
 
 ## Roadmap
 
-- [ No ] useMutation 🔥
-- [ No ] State Management 🐐
-- [ Yes ] Support
+- [ working on ] useMutation 🔥
+- [ X ] State Management 🐐
+- [ Y ] Support
 
 <!-- Contributing -->
 
@@ -231,7 +238,7 @@ See `contributing.md` for ways to get started.
 
 - it's work on react-native?
 
-  - sorry, no for now... maybe tomorrow! 😉
+  - Yes
 
 - why I use this instead of react-query?
   - Use whatever you want. 🤷

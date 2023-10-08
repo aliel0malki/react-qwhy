@@ -1,7 +1,7 @@
 {
   "name": "react-qwhy",
   "private": false,
-  "version": "0.2.9",
+  "version": "0.3.0",
   "type": "module",
   "files": [
     "dist/",
@@ -49,7 +49,8 @@
   ],
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-qwhy": "^0.2.9"
   },
   "peerDependencies": {
     "react": "^18.2.0"

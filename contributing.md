@@ -52,7 +52,7 @@
 
 Test example check out **useQuery** test `lib/tests/query.test.tsx`
 
-- For more information here [vitest](https://vitest.dev) and here [react testing library](https://testing-library.com/docs/react-testing-library/intro/)
+- For more information here [vitest](https://vitest.dev) and [react testing library](https://testing-library.com/docs/react-testing-library/intro/)
 
 3. Run your tests by `npm test` command
 
@@ -62,4 +62,4 @@ Test example check out **useQuery** test `lib/tests/query.test.tsx`
 
 ---
 
-5. ## Push as PR
+5. ## Push PR
